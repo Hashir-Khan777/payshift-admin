@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.animated-button:hover > .animated-icon {
+  right: 85%;
+  transition: all linear 400ms;
+}
+
+.animated-button:hover > .animated-text {
+  left: 40px;
+  transition: all linear 400ms;
+}
+
+.swiper-wrapper {
+  align-items: center;
+}
