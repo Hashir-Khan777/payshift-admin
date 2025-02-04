@@ -12,7 +12,14 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
-const ProjectSlider = ({ cards, headingWhite, headingBlack, link }) => {
+const ProjectSlider = ({
+  cards,
+  headingWhite,
+  headingBlack,
+  link,
+  activeProjects,
+  totalHours,
+}) => {
   const [activeIndex, setActiveIndex] = useState(1);
 
   const prevRef = useRef(null);
@@ -40,6 +47,13 @@ const ProjectSlider = ({ cards, headingWhite, headingBlack, link }) => {
       <h1 className="text-center text-2xl md:text-4xl mb-16 font-medium font-cashdisplay">
         <span className="text-white">{headingWhite}</span> {headingBlack}
       </h1>
+      <div className="font-lexend max-w-[347px] flex items-center justify-center text-white bg-black gap-2 rounded-full py-3 px-6 mb-10 mx-auto">
+        <p>
+          <span className="font-bold">{activeProjects}</span> Active Projects |{" "}
+          <span className="font-bold">{totalHours}</span> Total Hors
+        </p>
+        <img src="/svgIcons/pendingrightarrow.svg" />
+      </div>
       <div className="flex items-center justify-center mb-4 overflow-hidden">
         <Swiper
           autoplay
@@ -101,7 +115,9 @@ const ProjectSlider = ({ cards, headingWhite, headingBlack, link }) => {
                 </div>
 
                 <p className="font-light text-lg text-black/50">{card.para}</p>
-                <p className="font-light text-lg my-2">Progress: {card.progress}</p>
+                <p className="font-light text-lg my-2">
+                  Progress: {card.progress}
+                </p>
                 <div className="flex items-center gap-2 font-light text-lg">
                   Leads received:{" "}
                   <div className="flex gap-1">

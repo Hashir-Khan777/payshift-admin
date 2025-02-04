@@ -365,6 +365,8 @@ const HomeTab = () => {
         headingBlack="Projects"
         link="View all projects"
         cards={leadCards}
+        activeProjects={23}
+        totalHours={320}
       />
       <SliderComponent
         headingWhite="Revenue"
