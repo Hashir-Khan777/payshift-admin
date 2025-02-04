@@ -1,404 +1,388 @@
-import React from 'react'
-import SliderComponent from './SliderComponent';
-
-
-const recentHighlightsCards = [
-    {
-        title: "Request Closed",
-        info: "Your request is closed for Owner and Tenant Registration is closed.",
-        ref_no: 12345,
-        btnText: "Check",
-        active: false,
-        showMoreInfo:true
-    },
-    {
-        title: "Request Closed",
-        info: "Your request is closed for Owner and Tenant Registration is closed.",
-        ref_no: 12345,
-        btnText: "Check",
-        active: true,
-        showMoreInfo:true
-    },
-    {
-        title: "Request Closed",
-        info: "Your request is closed for Owner and Tenant Registration is closed.",
-        ref_no: 12345,
-        btnText: "Check",
-        active: false,
-        showMoreInfo:true
-    },
-    {
-        title: "Request Closed",
-        info: "Your request is closed for Owner and Tenant Registration is closed.",
-        ref_no: 12345,
-        btnText: "Check",
-        active: false,
-        showMoreInfo:true
-    },
-    {
-        title: "Request Closed",
-        info: "Your request is closed for Owner and Tenant Registration is closed.",
-        ref_no: 12345,
-        btnText: "Check",
-        active: true,
-        showMoreInfo:true
-    },
-    {
-        title: "Request Closed",
-        info: "Your request is closed for Owner and Tenant Registration is closed.",
-        ref_no: 12345,
-        btnText: "Check",
-        active: false,
-        showMoreInfo:true
-    },
-    {
-        title: "Request Closed",
-        info: "Your request is closed for Owner and Tenant Registration is closed.",
-        ref_no: 12345,
-        btnText: "Check",
-        active: false,
-        showMoreInfo:true
-    },
-    {
-        title: "Request Closed",
-        info: "Your request is closed for Owner and Tenant Registration is closed.",
-        ref_no: 12345,
-        btnText: "Check",
-        active: true,
-        showMoreInfo:true
-    },
-    {
-        title: "Request Closed",
-        info: "Your request is closed for Owner and Tenant Registration is closed.",
-        ref_no: 12345,
-        btnText: "Check",
-        active: false,
-        showMoreInfo:true
-    },
-];
-
-const offersCards = [
-    {
-        title: "Get AED 50 OFF",
-        info: "Refer a friend and get AED 50 OFF using code",
-        ref_no: "REF50",
-        btnText: "Claim",
-        offer: true,
-        active: false,
-        showMoreInfo:true
-    },
-    {
-        title: "Get AED 50 OFF",
-        info: "Refer a friend and get AED 50 OFF using code",
-        ref_no: "REF50",
-        btnText: "Claim",
-        offer: true,
-        active: true,
-        showMoreInfo:true
-    },
-    {
-        title: "Get AED 50 OFF",
-        info: "Refer a friend and get AED 50 OFF using code",
-        ref_no: "REF50",
-        btnText: "Claim",
-        offer: true,
-        active: false,
-        showMoreInfo:true
-    },
-    {
-        title: "Get AED 50 OFF",
-        info: "Refer a friend and get AED 50 OFF using code",
-        ref_no: "REF50",
-        btnText: "Claim",
-        offer: true,
-        active: false,
-        showMoreInfo:true
-    },
-    {
-        title: "Get AED 50 OFF",
-        info: "Refer a friend and get AED 50 OFF using code",
-        ref_no: "REF50",
-        btnText: "Claim",
-        offer: true,
-        active: true,
-        showMoreInfo:true
-    },
-    {
-        title: "Get AED 50 OFF",
-        info: "Refer a friend and get AED 50 OFF using code",
-        ref_no: "REF50",
-        btnText: "Claim",
-        offer: true,
-        active: false,
-        showMoreInfo:true
-    },
-    {
-        title: "Get AED 50 OFF",
-        info: "Refer a friend and get AED 50 OFF using code",
-        ref_no: "REF50",
-        btnText: "Claim",
-        offer: true,
-        active: false,
-        showMoreInfo:true
-    },
-    {
-        title: "Get AED 50 OFF",
-        info: "Refer a friend and get AED 50 OFF using code",
-        ref_no: "REF50",
-        btnText: "Claim",
-        offer: true,
-        active: true,
-        showMoreInfo:true
-    },
-    {
-        title: "Get AED 50 OFF",
-        info: "Refer a friend and get AED 50 OFF using code",
-        ref_no: "REF50",
-        btnText: "Claim",
-        offer: true,
-        active: false,
-        showMoreInfo:true
-    },
-];
-
-const paymentsCards = [
-    {
-        title: "Maintenance Fee",
-        propertyId: "#PRO50",
-        btnText: "Pay",
-        amount: 150,
-        payment: true,
-        active: false,
-        alert: "Due Jan 2024",
-        alertType: "danger",
-        showMoreInfo:true
-    },
-    {
-        title: "Maintenance Fee",
-        propertyId: "#PRO50",
-        btnText: "Pay",
-        amount: 150,
-        payment: true,
-        active: true,
-        alert: "Due Jan 2024",
-        alertType: "danger",
-        showMoreInfo:true
-    },
-    {
-        title: "Maintenance Fee",
-        propertyId: "#PRO50",
-        btnText: "Pay",
-        amount: 150,
-        payment: true,
-        active: false,
-        alert: "Due Jan 2024",
-        alertType: "danger",
-        showMoreInfo:true
-    },
-    {
-        title: "Maintenance Fee",
-        propertyId: "#PRO50",
-        btnText: "Pay",
-        amount: 150,
-        payment: true,
-        active: false,
-        alert: "Due Jan 2024",
-        alertType: "danger",
-        showMoreInfo:true
-    },
-    {
-        title: "Maintenance Fee",
-        propertyId: "#PRO50",
-        btnText: "Pay",
-        amount: 150,
-        payment: true,
-        active: true,
-        alert: "Due Jan 2024",
-        alertType: "danger",
-        showMoreInfo:true
-    },
-    {
-        title: "Maintenance Fee",
-        propertyId: "#PRO50",
-        btnText: "Pay",
-        amount: 150,
-        payment: true,
-        active: false,
-        alert: "Due Jan 2024",
-        alertType: "danger",
-        showMoreInfo:true
-    },
-    {
-        title: "Maintenance Fee",
-        propertyId: "#PRO50",
-        btnText: "Pay",
-        amount: 150,
-        payment: true,
-        active: false,
-        alert: "Due Jan 2024",
-        alertType: "danger",
-        showMoreInfo:true
-    },
-    {
-        title: "Maintenance Fee",
-        propertyId: "#PRO50",
-        btnText: "Pay",
-        amount: 150,
-        payment: true,
-        active: true,
-        alert: "Due Jan 2024",
-        alertType: "danger",
-        showMoreInfo:true
-    },
-    {
-        title: "Maintenance Fee",
-        propertyId: "#PRO50",
-        btnText: "Pay",
-        amount: 150,
-        payment: true,
-        active: false,
-        alert: "Due Jan 2024",
-        alertType: "danger",
-        showMoreInfo:true
-    },
-];
-
-const appointmentsCards = [
-    {
-        title: "Agent Appointment",
-        propertyId: "#PRO50",
-        btnText: "Check",
-        amount: 150,
-        appointment: true,
-        active: false,
-        alert: "Upcoming in 48H",
-        date: "20th Feb 8:30 AM",
-        alertType: "success",
-        showMoreInfo:true
-    },
-    {
-        title: "Agent Appointment",
-        propertyId: "#PRO50",
-        btnText: "Check",
-        amount: 150,
-        appointment: true,
-        active: true,
-        alert: "Upcoming in 48H",
-        date: "20th Feb 8:30 AM",
-        alertType: "success",
-        showMoreInfo:true
-    },
-    {
-        title: "Agent Appointment",
-        propertyId: "#PRO50",
-        btnText: "Check",
-        amount: 150,
-        appointment: true,
-        active: false,
-        alert: "Upcoming in 48H",
-        date: "20th Feb 8:30 AM",
-        alertType: "success",
-        showMoreInfo:true
-    },
-    {
-        title: "Agent Appointment",
-        propertyId: "#PRO50",
-        btnText: "Check",
-        amount: 150,
-        appointment: true,
-        active: false,
-        alert: "Upcoming in 48H",
-        date: "20th Feb 8:30 AM",
-        alertType: "success",
-        showMoreInfo:true
-    },
-    {
-        title: "Agent Appointment",
-        propertyId: "#PRO50",
-        btnText: "Check",
-        amount: 150,
-        appointment: true,
-        active: true,
-        alert: "Upcoming in 48H",
-        date: "20th Feb 8:30 AM",
-        alertType: "success",
-        showMoreInfo:true
-    },
-    {
-        title: "Agent Appointment",
-        propertyId: "#PRO50",
-        btnText: "Check",
-        amount: 150,
-        appointment: true,
-        active: false,
-        alert: "Upcoming in 48H",
-        date: "20th Feb 8:30 AM",
-        alertType: "success",
-        showMoreInfo:true
-    },
-    {
-        title: "Agent Appointment",
-        propertyId: "#PRO50",
-        btnText: "Check",
-        amount: 150,
-        appointment: true,
-        active: false,
-        alert: "Upcoming in 48H",
-        date: "20th Feb 8:30 AM",
-        alertType: "success",
-        showMoreInfo:true
-    },
-    {
-        title: "Agent Appointment",
-        propertyId: "#PRO50",
-        btnText: "Check",
-        amount: 150,
-        appointment: true,
-        active: true,
-        alert: "Upcoming in 48H",
-        date: "20th Feb 8:30 AM",
-        alertType: "success",
-        showMoreInfo:true
-    },
-    {
-        title: "Agent Appointment",
-        propertyId: "#PRO50",
-        btnText: "Check",
-        amount: 150,
-        appointment: true,
-        active: false,
-        alert: "Upcoming in 48H",
-        date: "20th Feb 8:30 AM",
-        alertType: "success",
-        showMoreInfo:true
-    },
-];
+import React from "react";
+import SliderComponent from "./SliderComponent";
+import ProjectSlider from "./ProjectSlider";
+import DisputeSlider from "./DisputeSlider";
 
 const HomeTab = () => {
-    return (
-        <>
-            <SliderComponent
-                headingWhite="Recent"
-                headingBlack="Highlights"
-                cards={recentHighlightsCards}
-            />
-            <SliderComponent
-                headingWhite="Offers"
-                headingBlack="& Promos"
-                cards={offersCards}
-            />
-            <SliderComponent
-                headingWhite="Upcoming"
-                headingBlack="Payments"
-                cards={paymentsCards}
-            />
-            <SliderComponent
-                headingWhite="Upcoming"
-                headingBlack="Appointments"
-                cards={appointmentsCards}
-            />
-        </>
-    )
-}
+  const leadCards = [
+    {
+      img: "/Images/banglow.png",
+      title: "Project name",
+      loc: "Dubai",
+      para: "Lorem ipsum dolor si amet.",
+      progress: "Under construction",
+      leads: "1,522",
+      btnText: "View",
+    },
+    {
+      img: "/Images/banglow.png",
+      title: "Project name",
+      loc: "Dubai",
+      para: "Lorem ipsum dolor si amet.",
+      progress: "Under construction",
+      leads: "1,522",
+      btnText: "View",
+    },
+    {
+      img: "/Images/banglow.png",
+      title: "Project name",
+      loc: "Dubai",
+      para: "Lorem ipsum dolor si amet.",
+      progress: "Under construction",
+      leads: "1,522",
+      btnText: "View",
+    },
+    {
+      img: "/Images/banglow.png",
+      title: "Project name",
+      loc: "Dubai",
+      para: "Lorem ipsum dolor si amet.",
+      progress: "Under construction",
+      leads: "1,522",
+      btnText: "View",
+    },
+    {
+      img: "/Images/banglow.png",
+      title: "Project name",
+      loc: "Dubai",
+      para: "Lorem ipsum dolor si amet.",
+      progress: "Under construction",
+      leads: "1,522",
+      btnText: "View",
+    },
+    {
+      img: "/Images/banglow.png",
+      title: "Project name",
+      loc: "Dubai",
+      para: "Lorem ipsum dolor si amet.",
+      progress: "Under construction",
+      leads: "1,522",
+      btnText: "View",
+    },
+    {
+      img: "/Images/banglow.png",
+      title: "Project name",
+      loc: "Dubai",
+      para: "Lorem ipsum dolor si amet.",
+      progress: "Under construction",
+      leads: "1,522",
+      btnText: "View",
+    },
+    {
+      img: "/Images/banglow.png",
+      title: "Project name",
+      loc: "Dubai",
+      para: "Lorem ipsum dolor si amet.",
+      progress: "Under construction",
+      leads: "1,522",
+      btnText: "View",
+    },
+    {
+      img: "/Images/banglow.png",
+      title: "Project name",
+      loc: "Dubai",
+      para: "Lorem ipsum dolor si amet.",
+      progress: "Under construction",
+      leads: "1,522",
+      btnText: "View",
+    },
+  ];
 
-export default HomeTab
+  const paymentsCards = [
+    {
+      title: "Maintenance Fee",
+      propertyId: "#PRO50",
+      btnText: "View",
+      amount: 250000,
+      payment: true,
+      active: false,
+      alert: "Due Jan 2024",
+      alertType: "danger",
+      showMoreInfo: true,
+    },
+    {
+      title: "Maintenance Fee",
+      propertyId: "#PRO50",
+      btnText: "View",
+      amount: 250000,
+      payment: true,
+      active: false,
+      alert: "Due Jan 2024",
+      alertType: "danger",
+      showMoreInfo: true,
+    },
+    {
+      title: "Maintenance Fee",
+      propertyId: "#PRO50",
+      btnText: "View",
+      amount: 250000,
+      payment: true,
+      active: false,
+      alert: "Due Jan 2024",
+      alertType: "danger",
+      showMoreInfo: true,
+    },
+    {
+      title: "Maintenance Fee",
+      propertyId: "#PRO50",
+      btnText: "View",
+      amount: 250000,
+      payment: true,
+      active: false,
+      alert: "Due Jan 2024",
+      alertType: "danger",
+      showMoreInfo: true,
+    },
+    {
+      title: "Maintenance Fee",
+      propertyId: "#PRO50",
+      btnText: "View",
+      amount: 250000,
+      payment: true,
+      active: false,
+      alert: "Due Jan 2024",
+      alertType: "danger",
+      showMoreInfo: true,
+    },
+    {
+      title: "Maintenance Fee",
+      propertyId: "#PRO50",
+      btnText: "View",
+      amount: 250000,
+      payment: true,
+      active: false,
+      alert: "Due Jan 2024",
+      alertType: "danger",
+      showMoreInfo: true,
+    },
+    {
+      title: "Maintenance Fee",
+      propertyId: "#PRO50",
+      btnText: "View",
+      amount: 250000,
+      payment: true,
+      active: false,
+      alert: "Due Jan 2024",
+      alertType: "danger",
+      showMoreInfo: true,
+    },
+    {
+      title: "Maintenance Fee",
+      propertyId: "#PRO50",
+      btnText: "View",
+      amount: 250000,
+      payment: true,
+      active: false,
+      alert: "Due Jan 2024",
+      alertType: "danger",
+      showMoreInfo: true,
+    },
+    {
+      title: "Maintenance Fee",
+      propertyId: "#PRO50",
+      btnText: "View",
+      amount: 250000,
+      payment: true,
+      active: false,
+      alert: "Due Jan 2024",
+      alertType: "danger",
+      showMoreInfo: true,
+    },
+    {
+      title: "Maintenance Fee",
+      propertyId: "#PRO50",
+      btnText: "View",
+      amount: 250000,
+      payment: true,
+      active: false,
+      alert: "Due Jan 2024",
+      alertType: "danger",
+      showMoreInfo: true,
+    },
+    {
+      title: "Maintenance Fee",
+      propertyId: "#PRO50",
+      btnText: "View",
+      amount: 250000,
+      payment: true,
+      active: false,
+      alert: "Due Jan 2024",
+      alertType: "danger",
+      showMoreInfo: true,
+    },
+    {
+      title: "Maintenance Fee",
+      propertyId: "#PRO50",
+      btnText: "View",
+      amount: 250000,
+      payment: true,
+      active: false,
+      alert: "Due Jan 2024",
+      alertType: "danger",
+      showMoreInfo: true,
+    },
+  ];
+
+  const DisputeCards = [
+    {
+      title: "John Smith",
+      propertyId: "#PRO50",
+      btnText: "View",
+      payment: true,
+      issue: "Unable to download report, facing issues on mobile app.",
+      ticketId: "#12345",
+      assignedTo: "George",
+      active: false,
+      alert: "High Priority",
+      alertType: "danger",
+      showMoreInfo: true,
+    },
+    {
+      title: "John Smith",
+      propertyId: "#PRO50",
+      btnText: "View",
+      payment: true,
+      issue: "Unable to download report, facing issues on mobile app.",
+      ticketId: "#12345",
+      assignedTo: "George",
+      active: false,
+      alert: "High Priority",
+      alertType: "danger",
+      showMoreInfo: true,
+    },
+    {
+      title: "John Smith",
+      propertyId: "#PRO50",
+      btnText: "View",
+      payment: true,
+      issue: "Unable to download report, facing issues on mobile app.",
+      ticketId: "#12345",
+      assignedTo: "George",
+      active: false,
+      alert: "High Priority",
+      alertType: "danger",
+      showMoreInfo: true,
+    },
+    {
+      title: "John Smith",
+      propertyId: "#PRO50",
+      btnText: "View",
+      payment: true,
+      issue: "Unable to download report, facing issues on mobile app.",
+      ticketId: "#12345",
+      assignedTo: "George",
+      active: false,
+      alert: "High Priority",
+      alertType: "danger",
+      showMoreInfo: true,
+    },
+    {
+      title: "John Smith",
+      propertyId: "#PRO50",
+      btnText: "View",
+      payment: true,
+      issue: "Unable to download report, facing issues on mobile app.",
+      ticketId: "#12345",
+      assignedTo: "George",
+      active: false,
+      alert: "High Priority",
+      alertType: "danger",
+      showMoreInfo: true,
+    },
+    {
+      title: "John Smith",
+      propertyId: "#PRO50",
+      btnText: "View",
+      payment: true,
+      issue: "Unable to download report, facing issues on mobile app.",
+      ticketId: "#12345",
+      assignedTo: "George",
+      active: false,
+      alert: "High Priority",
+      alertType: "danger",
+      showMoreInfo: true,
+    },
+    {
+      title: "John Smith",
+      propertyId: "#PRO50",
+      btnText: "View",
+      payment: true,
+      issue: "Unable to download report, facing issues on mobile app.",
+      ticketId: "#12345",
+      assignedTo: "George",
+      active: false,
+      alert: "High Priority",
+      alertType: "danger",
+      showMoreInfo: true,
+    },
+    {
+      title: "John Smith",
+      propertyId: "#PRO50",
+      btnText: "View",
+      payment: true,
+      issue: "Unable to download report, facing issues on mobile app.",
+      ticketId: "#12345",
+      assignedTo: "George",
+      active: false,
+      alert: "High Priority",
+      alertType: "danger",
+      showMoreInfo: true,
+    },
+    {
+      title: "John Smith",
+      propertyId: "#PRO50",
+      btnText: "View",
+      payment: true,
+      issue: "Unable to download report, facing issues on mobile app.",
+      ticketId: "#12345",
+      assignedTo: "George",
+      active: false,
+      alert: "High Priority",
+      alertType: "danger",
+      showMoreInfo: true,
+    },
+  ];
+
+  const categories = [
+    {
+      id: 1,
+      cat: "All",
+    },
+    {
+      id: 2,
+      cat: "By Project",
+    },
+    {
+      id: 3,
+      cat: "By Property",
+    },
+  ];
+
+  return (
+    <>
+      <ProjectSlider
+        headingWhite="Active"
+        headingBlack="Projects"
+        link="View all projects"
+        cards={leadCards}
+      />
+      <SliderComponent
+        headingWhite="Revenue"
+        headingBlack="Summary"
+        cards={paymentsCards}
+        link="View all projects"
+        categories={categories}
+      />
+      <DisputeSlider
+        headingWhite="Customer"
+        headingBlack="Tickets"
+        cards={DisputeCards}
+        link="View all projects"
+        categories={categories}
+        pending="23"
+      />
+    </>
+  );
+};
+
+export default HomeTab;

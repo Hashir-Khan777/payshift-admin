@@ -12,12 +12,13 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
-const SliderComponent = ({
+const DisputeSlider = ({
   cards,
   headingWhite,
   headingBlack,
   link,
   categories,
+  pending,
 }) => {
   const [activeIndex, setActiveIndex] = useState(1);
   const [activeCategory, setActiveCategory] = useState("All");
@@ -54,6 +55,12 @@ const SliderComponent = ({
       <h1 className="text-center text-2xl md:text-4xl mb-16 font-medium font-cashdisplay">
         <span className="text-white">{headingWhite}</span> {headingBlack}
       </h1>
+      <div className="font-lexend w-[153px] flex items-center justify-center text-white bg-black gap-2 rounded-full py-3 px-6 mb-10 mx-auto">
+        <p>
+          <span className="font-bold">{pending}</span> Pending
+        </p>
+        <img src="/svgIcons/pendingrightarrow.svg" />
+      </div>
       {categories?.length > 0 ? (
         <nav className="mb-[74px] font-lexend bg-[#D4E7FF] text-black lg:text-[20px] md:text-[18px] text-[12px] tracking-[4%] flex flex-row md:gap-[20px] gap-[4px] stify-center sm:justify-start items-center mx-auto md:max-w-[441px] sm:max-w-[318px] md:p-[20px] p-[6px] rounded-[3px] overflow-x-auto">
           {categories?.map((item) => (
@@ -107,9 +114,9 @@ const SliderComponent = ({
                   boxShadow: "0px 0px 20px rgba(146, 168, 255, 1)",
                 }}
               >
-                {/* {card.payment || card.appointment ? (
+                {card.payment || card.appointment ? (
                   <div
-                    className={`flex gap-6 text-2xl items-center justify-center w-full ${
+                    className={`flex gap-6 text-2xl items-center w-full ${
                       card.alertType === "success"
                         ? "text-[#17A900]"
                         : "text-[#F93434]"
@@ -134,7 +141,20 @@ const SliderComponent = ({
                     ) : null}
                     <h1 className="text-[16px] md:text-[25px]">{card.alert}</h1>
                   </div>
-                ) : null} */}
+                ) : null}
+                <div className="flex justify-between items-center mt-[36px]">
+                  <div className="font-lexend font-semibold text-base">
+                    <p className="text-black/50">Ticket ID:</p>
+                    <p className="text-black">{card.ticketId}</p>
+                  </div>
+                  <div className="font-lexend font-semibold text-base">
+                    <p className="text-black/50">AssignedTo:</p>
+                    <p className="text-black">{card.assignedTo}</p>
+                  </div>
+                </div>
+
+                <div className="bg-[#D4E2F3] border border-solid my-[36px]" />
+
                 {/* ---- Card ---- */}
                 <div
                   className={`flex ${
@@ -158,30 +178,14 @@ const SliderComponent = ({
                       href="/"
                       className="text-black text-sm md:text-base underline font-medium"
                     >
-                      More Info
+                      View Profile
                     </Link>
                   )}
                 </div>
-                {card.payment ? (
-                  <div className="flex align-center justify-center gap-3">
-                    <p className="font-bold text-2xl md:text-2xl text-center my-3 md:my-6">
-                      AED {card.amount?.toLocaleString()}
-                    </p>
-                    <img src="/svgIcons/upammount.svg" />
-                  </div>
-                ) : null}
-                {card.buyers && card.tenants ? (
-                  <div className="font-lexend flex items-center mt-[48px]">
-                    <div className="w-[206px]">
-                      <p className="font-semibold text-xl">Buyers</p>
-                      <p className="font-light text-base text-black/50">{card.buyers}</p>
-                    </div>
-                    <div className="w-[206px]">
-                      <p className="font-semibold text-xl">Tenants</p>
-                      <p className="font-light text-base text-black/50">{card.tenants}</p>
-                    </div>
-                  </div>
-                ) : null}
+                <p className="font-lexend font-semibold text-2xl mb-[12px] mt-[36px]">
+                  Issue
+                </p>
+                <p className="font-lexend font-light mb-[36px]">{card.issue}</p>
                 {card.appointment ? (
                   <p className="font-bold text-xl md:text-x2l text-center my-3 md:my-6">
                     {card.date}
@@ -250,4 +254,4 @@ const SliderComponent = ({
   );
 };
 
-export default SliderComponent;
+export default DisputeSlider;

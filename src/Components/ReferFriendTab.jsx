@@ -198,7 +198,7 @@ const categories = [
         cat: "Group Type"
     },
     {
-        id: 2,
+        id: 3,
         cat: "Project Type"
     },
 ]
